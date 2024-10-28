@@ -1,18 +1,62 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de controle de ponto</title>
+    <title>Registro de Ponto</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="data-hora">
-        <p id="dia-semana">Segunda-feira</p>
-        <p id="dia-mes-ano">26/08/2024</p>
-        <p id="hora-min-seg">08:01:3</p>
+    
+    <header id="header">
+        <img src="img/BaterPonto.png" alt="Logo da Empresa" class="logo">
+        <h1>Painel de Registro de Ponto</h1>
+    </header>
+
+    <!-- Div para encapsular a data e hora -->
+    <div class="data-hora-container">
+        <div id="data-hora">
+            <span id="dia-semana"></span>, <span id="dia-mes-ano"></span> | <span id="hora-min-seg"></span>
+        </div>
     </div>
-    <button>Bater ponto!</button>
+
+    <button id="btn-bater-ponto">Bater Ponto</button>
+
+    <dialog id="dialog-ponto">
+        <p id="dialog-data"></p>
+        <p id="dialog-hora"></p>
+        <p id="dialog-last-register"></p>
+
+        <label for="tipos-ponto">Tipo de Ponto:</label>
+        <select id="tipos-ponto">
+            <option value="entrada">Entrada</option>
+            <option value="intervalo">Início Intervalo</option>
+            <option value="volta-intervalo">Fim Intervalo</option>
+            <option value="saida">Saída</option>
+        </select>
+
+        <!-- Campo para selecionar data de ponto anterior -->
+        <label for="data-ponto">Data:</label>
+        <input type="date" id="data-ponto">
+
+        <!-- Justificativa e upload de arquivo -->
+        <label for="justificativa">Justificativa (opcional):</label>
+        <textarea id="justificativa" rows="4" cols="50" placeholder="Digite a justificativa, se necessário"></textarea>
+        
+        <label for="arquivo-justificativa">Anexar Arquivo (opcional):</label>
+        <input type="file" id="arquivo-justificativa">
+
+        <button id="btn-dialog-bater-ponto">Registrar Ponto</button>
+        <button id="btn-dialog-fechar">Fechar</button>
+    </dialog>
+
+    <div id="alerta-registro-ponto" class="hidden">
+        Ponto registrado com sucesso!
+        <button id="alerta-registro-ponto-fechar">Fechar</button>
+    </div>
+
+    <a href="html/relatorio.html">Ver Relatório</a>
+
+    <script src="js/index.js"></script>
 </body>
-<script src="js/index.js"></script>
 </html>

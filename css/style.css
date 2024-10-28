@@ -1,3 +1,152 @@
-.data-hora{
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Nanum Gothic Coding", monospace;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    text-align: center; /* Garante que todos os elementos fiquem centralizados */
+}
+
+/* Estilo da logo */
+.logo {
+    width: 300px; /* Tamanho da logo aumentado */
+    height: auto;
+    transition: transform 0.3s;
+    margin-bottom: 40px; /* Espaçamento maior para destacar a logo */
+}
+
+.logo:hover {
+    transform: scale(1.15); /* Efeito de hover */
+}
+
+/* Estilo da data e hora */
+.data-hora-container {
+    margin-top: 20px; /* Espaço acima da data/hora */
+    text-align: center; /* Centraliza o texto */
+    font-weight: bold; /* Deixa em negrito */
+}
+
+#data-hora {
+    font-size: 2rem; /* Aumenta o tamanho da fonte */
+    color: #555; /* Cor do texto */
+}
+
+
+/* Botão de fechar do diálogo */
+#btn-dialog-fechar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Estilo do alerta de registro */
+#alerta-registro-ponto {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #28a745;
+    padding: 15px 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#alerta-registro-ponto span {
+    color: white;
+    font-size: 1.4rem;
+}
+
+#alerta-registro-ponto-fechar {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* Botão central de "Bater Ponto" */
+#div-btn-bater-ponto {
     text-align: center;
+    margin: 60px 0; 
+}
+
+#btn-bater-ponto {
+    padding: 20px 40px;
+    background-color: #007bff;
+    color: white;
+    font-size: 2rem; 
+    border: none;
+    border-radius: 10px; 
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#btn-bater-ponto:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+
+#dialog-ponto {
+    position: relative;
+    width: 80%;
+    max-width: 450px; 
+    margin: 0 auto;
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+#dialog-ponto p {
+    font-size: 1.8rem; 
+    margin: 20px 0;
+}
+
+#dialog-ponto select {
+    padding: 15px;
+    font-size: 1.4rem;
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #1e08e2;
+    border-radius: 5px;
+}
+
+#btn-dialog-bater-ponto {
+    padding: 15px 30px;
+    font-size: 1.6rem; 
+    background-color: #080cda;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#btn-dialog-bater-ponto:hover {
+    background-color: #218838;
+}
+
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.show {
+    opacity: 1;
+    visibility: visible;
 }
