@@ -9,35 +9,35 @@ body {
     align-items: center;
     height: 100vh;
     flex-direction: column;
-    text-align: center; /* Garante que todos os elementos fiquem centralizados */
+    text-align: center; 
 }
 
-/* Estilo da logo */
+
 .logo {
-    width: 300px; /* Tamanho da logo aumentado */
+    width: 300px; 
     height: auto;
     transition: transform 0.3s;
-    margin-bottom: 40px; /* Espaçamento maior para destacar a logo */
+    margin-bottom: 40px; 
 }
 
 .logo:hover {
-    transform: scale(1.15); /* Efeito de hover */
+    transform: scale(1.15); 
 }
 
-/* Estilo da data e hora */
+
 .data-hora-container {
-    margin-top: 20px; /* Espaço acima da data/hora */
-    text-align: center; /* Centraliza o texto */
-    font-weight: bold; /* Deixa em negrito */
+    margin-top: 20px; 
+    text-align: center; 
+    font-weight: bold; 
 }
 
 #data-hora {
-    font-size: 2rem; /* Aumenta o tamanho da fonte */
-    color: #555; /* Cor do texto */
+    font-size: 2rem; 
+    color: #555; 
 }
 
 
-/* Botão de fechar do diálogo */
+
 #btn-dialog-fechar {
     position: absolute;
     top: 10px;
@@ -48,7 +48,7 @@ body {
     cursor: pointer;
 }
 
-/* Estilo do alerta de registro */
+
 #alerta-registro-ponto {
     position: fixed;
     bottom: 20px;
@@ -75,7 +75,7 @@ body {
     cursor: pointer;
 }
 
-/* Botão central de "Bater Ponto" */
+
 #div-btn-bater-ponto {
     text-align: center;
     margin: 60px 0; 

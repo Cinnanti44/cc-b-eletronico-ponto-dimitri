@@ -1,6 +1,6 @@
 body { 
-    font-family: 'Roboto', sans-serif; /* Mudando a fonte */
-    background-color: #f4f4f4; /* Cor de fundo mais clara */
+    font-family: 'Roboto', sans-serif; 
+    background-color: #f4f4f4; 
     margin: 0;
     padding: 20px;
 }
@@ -11,58 +11,58 @@ body {
 }
 
 .logo {
-    width: 150px; /* Tamanho do logo */
+    width: 150px; 
     height: auto;
     display: block;
     margin: 0 auto 10px auto;
 }
 
 h1 {
-    font-size: 28px; /* Aumentando o tamanho do título */
-    color: #2c3e50; /* Cor mais escura para o título */
+    font-size: 28px; 
+    color: #2c3e50; 
 }
 
 .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background: #fff;
-    border-radius: 10px; /* Cantos mais arredondados */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
+    background: #ffffff; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
 }
+
 
 ul {
     list-style-type: none;
     padding: 0;
     margin: 20px auto;
     max-width: 600px;
-    background-color: #f9f9f9; /* Cor de fundo da lista */
+    background-color: #f9f9f9; 
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 li {
-    margin: 10px 0;
-    padding: 20px; /* Aumentando o padding */
-    background-color: #fff;
-    border-radius: 8px; /* Arredondando os itens da lista */
+    margin: 15px 0; 
+    padding: 20px; 
+    background-color: #fff; 
+    border-radius: 8px; 
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: transform 0.3s, box-shadow 0.3s; /* Transição mais suave */
-    border-bottom: 1px solid #e0e0e0;
+    flex-direction: column; 
+    transition: transform 0.3s, box-shadow 0.3s; 
+    border: 1px solid #e0e0e0; 
 }
 
 li:hover {
-    transform: translateY(-3px); /* Leve elevação ao passar o mouse */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra mais intensa ao hover */
-    background-color: #f2f2f2; /* Leve alteração na cor de fundo */
+    transform: translateY(-3px); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background-color: #f2f2f2; 
 }
 
 select {
     display: block;
     margin: 20px auto;
-    padding: 12px; /* Aumentando o padding */
+    padding: 12px; 
     font-size: 16px;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -74,26 +74,39 @@ select {
 }
 
 select:hover {
-    border-color: #3498db; /* Alterando a cor da borda ao hover */
-    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5); /* Sombra ao hover */
+    border-color: #3498db; 
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5); 
 }
 
 li span {
     font-weight: 500;
-    color: #34495e; /* Cor de texto mais escura */
+    color: #34495e; 
+    margin-bottom: 10px; 
 }
 
 li button {
-    background-color: #3498db; /* Cor de fundo dos botões */
+    background-color: #3498db; 
     color: white;
     border: none;
-    padding: 10px 15px; /* Aumentando o padding dos botões */
+    padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
+    margin-top: 10px; 
+    align-self: flex-end; 
 }
 
 li button:hover {
-    background-color: #2980b9; /* Cor do botão ao hover */
-    transform: translateY(-2px); /* Leve elevação ao passar o mouse */
+    background-color: #2980b9; 
+    transform: translateY(-2px); 
+}
+
+.justificativa,
+.observacao {
+    margin-top: 10px; 
+    padding: 10px; 
+    background-color: #f0f0f0; 
+    border-radius: 5px; 
+    border: 1px solid #d0d0d0; 
+    width: 100%; 
 }

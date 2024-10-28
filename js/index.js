@@ -54,13 +54,13 @@ const btnDialogBaterPonto = document.getElementById("btn-dialog-bater-ponto");
 btnDialogBaterPonto.addEventListener("click", async () => {
     const typeRegister = document.getElementById("tipos-ponto").value;
 
-    // Pega a data selecionada ou a data atual no formato ISO
+    
     const selectedDateInput = document.getElementById('data-ponto').value;
-    const selectedDate = selectedDateInput ? new Date(selectedDateInput + "T12:00:00") : new Date(); // Se não houver data selecionada, use a data atual
+    const selectedDate = selectedDateInput ? new Date(selectedDateInput + "T12:00:00") : new Date(); 
 
-    const currentDate = new Date(); // Objeto Date para a data atual
+    const currentDate = new Date(); 
 
-    // Verifica se a data selecionada é no futuro
+    
     if (selectedDate > currentDate) {
         alert('Não é possível registrar um ponto em uma data futura.');
         return;
@@ -74,8 +74,8 @@ btnDialogBaterPonto.addEventListener("click", async () => {
         return;
     }
 
-    // Obtendo a justificativa do campo de entrada
-    const justificativa = document.getElementById("justificativa").value; // Supondo que você tenha um input com ID 'justificativa'
+    
+    const justificativa = document.getElementById("justificativa").value; 
 
     let ponto = {
         "data": selectedDate.toLocaleDateString("pt-BR"),
@@ -83,7 +83,7 @@ btnDialogBaterPonto.addEventListener("click", async () => {
         "localizacao": userCurrentPosition,
         "id": Date.now(),
         "tipo": typeRegister,
-        "justificativa": justificativa // Armazenando a justificativa
+        "justificativa": justificativa 
     
     };
 
@@ -159,7 +159,7 @@ function getCurrentDate() {
 
 function getCurrentDateISO() {
     const date = new Date();
-    return date.toISOString().split('T')[0]; // Retorna a data no formato YYYY-MM-DD
+    return date.toISOString().split('T')[0]; 
 }
 
 function printCurrentHour() {
